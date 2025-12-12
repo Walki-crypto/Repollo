@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-gradient: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  --secondary-gradient: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
+  --surface-color: #ffffff;
+  --background-color: #f8fafc;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  background-image:
+    radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(124, 58, 237, 0.05) 0px, transparent 50%);
+  background-attachment: fixed;
+  color: #1e293b;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #94a3b8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-subtle {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+/* Utility Components */
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.dashboard-card {
+  @apply bg-white rounded-xl border border-slate-100 p-6 transition-all duration-300;
+  box-shadow: 0 2px 8px rgb(0, 0, 0, 0.04);
+}
+
+.dashboard-card:hover {
+  @apply -translate-y-1 border-blue-100;
+  box-shadow: 0 12px 24px rgb(0, 0, 0, 0.06);
+}
+
+.cyber-gradient {
+  background: var(--primary-gradient);
+}
+
+.text-gradient {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Threat Badges - Glassmorphism Style */
+.threat-badge {
+  @apply px-3 py-1 rounded-full text-xs font-semibold tracking-wide border backdrop-blur-sm transition-all duration-300;
+}
+
+.threat-critical {
+  @apply threat-badge bg-red-50 text-red-700 border-red-200/60 shadow-sm shadow-red-100;
+}
+
+.threat-high {
+  @apply threat-badge bg-orange-50 text-orange-700 border-orange-200/60 shadow-sm shadow-orange-100;
+}
+
+.threat-medium {
+  @apply threat-badge bg-yellow-50 text-yellow-700 border-yellow-200/60 shadow-sm shadow-yellow-100;
+}
+
+.threat-low {
+  @apply threat-badge bg-green-50 text-green-700 border-green-200/60 shadow-sm shadow-green-100;
+}
+
+/* Glass Effect Utility */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Table Enhancements */
+tr:hover td {
+  @apply transition-colors duration-200;
+}
