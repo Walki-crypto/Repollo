@@ -65,9 +65,5 @@ El sistema está configurado en **Modo Prototipo** para facilitar el acceso:
 *   **Contraseña:** Cualquiera (ej: `1234`)
 *   **Código MFA:** `123456`
 
-## � Capturas
-
-*(Puedes agregar aquí capturas de pantalla de tu dashboard)*
-
 ---
-Desarrollado con ❤️ para CyberMonitor RD.
+Desarrollado por Walki Jr. Hughes Madrigal (2023-0543) y Carlos M. Encarnación Mercedes (2023-0238).
